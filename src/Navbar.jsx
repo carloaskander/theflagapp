@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { DarkModeContext } from './contexts/DarkModeContext.jsx';
-import { useNavigate } from 'react-router-dom'; // Ensure you've imported this.
+import { useNavigate } from 'react-router-dom';
+import moonIcon from '../assets/moon.svg';
+import moonBorderedIcon from '../assets/moon-bordered.svg';
 import './Navbar.css';
 
 const Navbar = () => {
     const { darkMode, setDarkMode } = useContext(DarkModeContext);
-    const navigate = useNavigate(); // For programmatic navigation
+    const navigate = useNavigate();
 
     const toggleDarkMode = () => {
         setDarkMode(prevMode => {
@@ -16,15 +18,15 @@ const Navbar = () => {
     };
 
     const goToHomePage = () => {
-        navigate('/'); // Redirect to homepage
+        navigate('/');
     };
 
     return (
         <div className={`navbar ${darkMode ? 'dark' : 'light'}`}>
-            <h1 onClick={goToHomePage} className="navbar-title">The Flag App</h1> {/* Added an onClick handler here */}
+            <h1 onClick={goToHomePage} className="navbar-title">The Flag App</h1>
             <button onClick={toggleDarkMode}>
                 <img 
-                    src={darkMode ? "/assets/moon.svg" : "/assets/moon-bordered.svg"}
+                    src={darkMode ? moonIcon : moonBorderedIcon}
                     alt="Mode icon"
                     className="mode-icon"
                 />
