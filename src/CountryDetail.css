@@ -1,0 +1,100 @@
+.country-detail {
+    padding: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Target the button inside the .country-detail */
+.country-detail > button {
+    width: fit-content; /* This will make the button only as wide as its content */
+}
+
+.country-content {
+    display: flex;
+    align-items: center;  /* To vertically align items if they have different heights */
+    gap: 5rem;  /* Space between children. Adjust as needed */
+}
+
+.country-flag {
+    /* You can set a fixed width or max-width if you want */
+    width: 500px;  /* This is just an example */
+    height: auto;  /* Maintain the aspect ratio of the flag image */
+}
+
+.country-info {
+    display: flex;
+    flex-wrap: wrap; /* allows the items to wrap if they exceed the container's width */
+    gap: 1rem; /* space between rows/columns; not supported in some older browsers */
+}
+
+.country-info > h1 {
+    width: 100%;
+    font-size: 2rem;
+}
+
+/* Example with fixed width for the child items, you can adjust as per your design */
+.country-info > p {
+    width: calc(50% - 1rem);
+}
+
+.back-button {
+    display: flex;          /* To line up the SVG and the text horizontally */
+    align-items: center;    /* To vertically center the SVG and text */
+    border: none;           /* Remove default border */
+    background-color: transparent; /* Make the button's background transparent */
+    cursor: pointer;        /* Cursor style for the button */
+    padding: 0.5rem 1rem;   /* Some padding around the text and SVG */
+}
+
+.back-arrow {
+    margin-right: 0.5rem;  /* Space between the SVG and the text */
+    width: 1.5rem;        /* Adjust this value for your SVG's size */
+    height: auto;          /* Maintain the aspect ratio of the SVG */
+}
+
+.back-button {
+    font-size: 1.125rem;
+}
+
+.back-button.light {
+    color: #333;
+}
+
+.back-button.dark {
+    color: #FFF;
+}
+
+/* General mobile devices in portrait */
+@media only screen and (max-width: 425px) {
+    .country-detail {
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .country-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .country-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .country-info > p {
+        width: 100%;
+    }
+
+    .country-flag {
+        /* You can set a fixed width or max-width if you want */
+        width: 100%;  /* This is just an example */
+        height: auto;  /* Maintain the aspect ratio of the flag image */
+    }
+
+    .back-button {
+        margin-left: -1rem;
+    }
+}

@@ -1,0 +1,39 @@
+/* ScrollToTopButton.css */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2f3843;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2), 0px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 15px 22px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+    font-size: 20px;
+}
+
+.scroll-to-top.light {
+    background-color: #2f3843;
+    color: #fff;
+    /* Any other dark mode styles here */
+}
+
+.scroll-to-top.light:hover {
+    background-color: #1e242b;
+}
+
+.scroll-to-top.dark {
+    background-color: #fff;
+    color: #000;
+    /* Any other light mode styles here */
+}
+
+.scroll-to-top.dark:hover {
+    background-color: #dedede;
+}

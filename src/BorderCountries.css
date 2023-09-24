@@ -1,0 +1,42 @@
+/* Container for displaying border countries. */
+.border-countries {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* List layout for border country buttons. */
+.border-countries-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between buttons */
+}
+
+/* Styling for each individual border country button. */
+.border-country-btn {
+    background-color: #2f3843;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* Light theme styling for border country button. */
+.border-country-btn.light {
+    background-color: #fff;
+    color: black;
+}
+
+/* Dark theme styling for border country button. */
+.border-country-btn.dark {
+    background-color: #2f3843;
+    color: #fff;
+}
+
+/* Hover effect for border country button. */
+.border-country-btn:hover {
+    background-color: #434c59;
+}

@@ -1,0 +1,72 @@
+/* Importing the 'Roboto' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
+/* Root level (default) styles */
+:root {
+  /* Font settings */
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  
+  /* Text rendering optimizations */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  
+  /* Transitions for dark/light mode switch */
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* Default colors for light theme */
+  --text-color: #242424;
+  --bg-color: #f4f4f4;
+}
+
+/* Global reset for margins, padding, and setting the box model to border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body-level styles */
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* Font settings for text elements and form controls */
+h1, h2, h3, p, button, select, option, input {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Weight setting for button and select elements */
+button, select {
+  font-weight: 500;
+}
+
+/* Font size setting for h1 element */
+h1 {
+  font-size: 1.5em;
+}
+
+/* Dark theme overrides */
+body.dark {
+  --text-color: #ffffff;
+  --bg-color: #242c35;
+}
+
+/* Styling for the countries grid container */
+.countries-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;  /* Center the child elements */
+  padding: 1rem 0rem;
+}

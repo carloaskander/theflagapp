@@ -1,0 +1,40 @@
+/* Styling for the search input bar */
+.search-bar {
+    /* Width adjustments */
+    max-width: 400px;
+    width: 100%;
+    margin-right: 30px;
+    
+    /* Padding and border styling */
+    padding: 1rem;
+    border-radius: 4px;
+    border: none;
+    
+    /* Removing the default appearance for consistency across browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    /* Adding a subtle shadow for a lifted appearance */
+    box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.08);
+    
+    /* Transitions for smooth visual effects when switching dark/light mode */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light theme colors for the search bar */
+.search-bar.light {
+    color: #242424;
+    background-color: #ffffff;
+}
+
+/* Dark theme colors for the search bar */
+.search-bar.dark {
+    color: #ffffff;
+    background-color: #2f3843;  
+}
+
+/* Outline for accessibility when navigating with TAB */    
+.search-bar:focus {
+    outline: 1px solid #000000a3;
+}
