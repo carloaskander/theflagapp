@@ -4,7 +4,7 @@
 }
 
 /* General mobile devices in portrait */
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 565px) {
     .main-content {
         padding: 1rem;
     }

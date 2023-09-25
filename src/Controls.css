@@ -2,15 +2,8 @@
     display: flex;
     justify-content: space-between; /* This will push SearchBar to the left and FilterDropdown to the right */
     flex-wrap: wrap;
+    gap: 10px;
     background-color: var(--bg-color); /* To ensure it respects the light/dark theme */
     color: var(--text-color);
     padding: 0rem 0.8rem;
 }
-
-/* General mobile devices in portrait */
-@media only screen and (max-width: 425px) {
-    .controls {
-        gap: 10px;
-    }
-}
-
